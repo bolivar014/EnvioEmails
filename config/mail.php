@@ -16,8 +16,9 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
-
+    // 'driver' => env('MAIL_DRIVER', 'smtp'), // Configuración de Driver por defecto
+    'driver' => env('MAIL_DRIVER', 'smtp.gmail.com'), // Usaremos la configuración del driver de Gmail
+ 
     /*
     |--------------------------------------------------------------------------
     | SMTP Host Address
@@ -42,7 +43,8 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    // 'port' => env('MAIL_PORT', 587), // Puerto que se utiliza por defecto
+    'port' => env('MAIL_PORT', 465),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,10 +57,15 @@ return [
     |
     */
 
+    // 'from' => [
+    //    'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+    //    'name' => env('MAIL_FROM_NAME', 'Example'),
+    // ],
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'serviciodeemailssa@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Servicio De Emails S.A'),
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +78,8 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    // 'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
 
     /*
     |--------------------------------------------------------------------------
