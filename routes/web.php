@@ -17,3 +17,19 @@ Route::get('/', function () {
 
 
 Route::get('/contact', 'RouteController@contact');
+
+
+Route::post('/contact/store', 'MailController@store');
+
+Route::get('/sendmail', function(){
+    $data = array(
+        'name' => "Curso Laravel - Envio Correos",
+    );
+    // dd($data);
+    Mail::send('emails.welcome', $data, function($message){
+        $message->from('serviciodeemailssa@gmail.com', 'Curso Laravel - Envio Correos');
+        $message->to('bolivar014@gmail.com')->subject('Envio de Emails - App Laravel');
+    });
+
+    return "Mensaje enviado Exitosamente!!";
+});

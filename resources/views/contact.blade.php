@@ -19,7 +19,7 @@
     <body>
         <div class="container">
             <h3 class="head text-center">Formulario de Contacto</h3>
-            <form action="{{ url('') }}" method="POST">
+            <form action="{{ url('contact/store') }}" method="POST">
                 <div class="row">
                    <div class="col-md-6 contact-left">
                         <div clas="form-group">
@@ -31,8 +31,8 @@
                             <label for="">Email</label>
                             <input type="text" class="form-control" name="email" id="email" placeholder="Email">    
                         </div>
-                        
                     </div>
+                    {{ csrf_field() }}
                     <div class="col-md-6 contact-right">
                         <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="form-control" placeholder="Digite su Mensaje..."></textarea>
                     </div>

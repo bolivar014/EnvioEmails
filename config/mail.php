@@ -16,9 +16,9 @@ return [
     |
     */
 
-    // 'driver' => env('MAIL_DRIVER', 'smtp'), // Configuración de Driver por defecto
-    'driver' => env('MAIL_DRIVER', 'smtp.gmail.com'), // Usaremos la configuración del driver de Gmail
- 
+    'driver' => env('MAIL_DRIVER', 'smtp'), 
+    
+    
     /*
     |--------------------------------------------------------------------------
     | SMTP Host Address
@@ -30,9 +30,10 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-
-    /*
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'), // Configuración de Driver por defecto
+    // 'host' => env('MAIL_HOST', 'smtp.gmail.com'), // Usaremos la configuración del driver de Gmail
+    
+     /*
     |--------------------------------------------------------------------------
     | SMTP Host Port
     |--------------------------------------------------------------------------
@@ -43,9 +44,9 @@ return [
     |
     */
 
-    // 'port' => env('MAIL_PORT', 587), // Puerto que se utiliza por defecto
-    'port' => env('MAIL_PORT', 465),
-
+    'port' => env('MAIL_PORT', 587), // Puerto que se utiliza por defecto
+    // 'port' => env('MAIL_PORT', 465),
+    
     /*
     |--------------------------------------------------------------------------
     | Global "From" Address
@@ -57,16 +58,15 @@ return [
     |
     */
 
-    // 'from' => [
-    //    'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-    //    'name' => env('MAIL_FROM_NAME', 'Example'),
-    // ],
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'serviciodeemailssa@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'Servicio De Emails S.A'),
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
-
-
+    // 'from' => [
+    //     'address' => env('MAIL_FROM_ADDRESS', 'serviciodeemailssa@gmail.com'),
+    //     'name' => env('MAIL_FROM_NAME', 'Servicio De Emails S.A'),
+    // ],
+    
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol
@@ -78,9 +78,9 @@ return [
     |
     */
 
-    // 'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
-
+    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    // 'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
+    
     /*
     |--------------------------------------------------------------------------
     | SMTP Server Username
@@ -93,8 +93,8 @@ return [
     */
 
     'username' => env('MAIL_USERNAME'),
-
     'password' => env('MAIL_PASSWORD'),
+
 
     /*
     |--------------------------------------------------------------------------

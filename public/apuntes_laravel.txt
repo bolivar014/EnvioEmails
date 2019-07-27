@@ -327,7 +327,24 @@
         'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
 
     Cambiamos datos de configuracion en ".env"
-    
+
+    Error de configuracion en el envio de Emails desde Gmail
+    se activa en el correo el envio de emails desde origenes 
+
+    se agrega en la siguiente ruta "
+
+    C:\xampp\htdocs\itis_db\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php" en la funcion establishSocketConnection()
+    {
+
+        ..... $options = [];
+
+        $options['ssl']['verify_peer'] = FALSE;
+        $options['ssl']['verify_peer_name'] = FALSE;
+    }
+
+    Ruta de apoyo
+    https://stackoverflow.com/questions/30556773/how-to-fix-stream-socket-enable-crypto-ssl-operation-failed-with-code-1
+
 [*] 
 	
 [*] 
