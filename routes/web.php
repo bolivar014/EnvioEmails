@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/contact', 'RouteController@contact');
 
 
-Route::post('/contact/store', 'MailController@store');
+Route::post('/contact', 'MailController@store');
 
 Route::get('/sendmail', function(){
     $data = array(
@@ -27,8 +27,8 @@ Route::get('/sendmail', function(){
     );
     // dd($data);
     Mail::send('emails.welcome', $data, function($message){
-        $message->from('serviciodeemailssa@gmail.com', 'Curso Laravel - Envio Correos');
-        $message->to('bolivar014@gmail.com')->subject('Envio de Emails - App Laravel');
+        $message->from('serviciodeemailssa@gmail.com', 'Curso Laravel - Envio Correos'); // Asunto de origen
+        $message->to('bolivar014@gmail.com')->subject('Envio de Emails - App Laravel');  // Asunto de destino
     });
 
     return "Mensaje enviado Exitosamente!!";

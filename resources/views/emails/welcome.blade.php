@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Bienvenidos a:</h1> <strong>Envio de correos de ensayo</strong>
 </body>
 </html>

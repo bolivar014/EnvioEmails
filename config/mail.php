@@ -16,9 +16,8 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'), 
-    
-    
+    'driver' => env('MAIL_DRIVER', 'smtp'),
+
     /*
     |--------------------------------------------------------------------------
     | SMTP Host Address
@@ -31,7 +30,6 @@ return [
     */
 
     'host' => env('MAIL_HOST', 'smtp.mailgun.org'), // Configuración de Driver por defecto
-    // 'host' => env('MAIL_HOST', 'smtp.gmail.com'), // Usaremos la configuración del driver de Gmail
     
      /*
     |--------------------------------------------------------------------------
@@ -45,7 +43,6 @@ return [
     */
 
     'port' => env('MAIL_PORT', 587), // Puerto que se utiliza por defecto
-    // 'port' => env('MAIL_PORT', 465),
     
     /*
     |--------------------------------------------------------------------------
@@ -62,10 +59,6 @@ return [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
-    // 'from' => [
-    //     'address' => env('MAIL_FROM_ADDRESS', 'serviciodeemailssa@gmail.com'),
-    //     'name' => env('MAIL_FROM_NAME', 'Servicio De Emails S.A'),
-    // ],
     
     /*
     |--------------------------------------------------------------------------
@@ -79,7 +72,6 @@ return [
     */
 
     'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-    // 'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
     
     /*
     |--------------------------------------------------------------------------
